@@ -1,0 +1,122 @@
+.header__container{
+    margin-top: 4rem;
+    text-align: center;
+    height: calc(100vh - 4rem);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    line-height: 1.7;
+    /* position: relative; */
+}
+
+.header__container .me{
+    width: 100vw;
+    max-width: 70vw;
+    background: url(../../assets/me.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.me__overlay{
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to left,  rgba(0, 0, 0, 0.815),  transparent,  rgba(0, 0, 0, 0.9));
+}
+
+.header__content{
+    margin: 0 auto;
+    margin-top: 10rem;
+}
+
+.name{
+    font-size: 3rem;
+}
+.btn{
+    color: var(--color-pry);
+    background: transparent;
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    transition: var(--transition);
+    margin-top: 2rem;
+    border: 1px solid var(--color-pry) ;
+}
+
+.btn:hover{
+    border: 1px solid var(--color-pry);
+    background-color: var(--color-pry);
+    color: var(--color-white);
+}
+
+
+
+
+.button{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.header__socials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 1rem;
+}
+
+.scroll__down{
+    position: absolute;
+    bottom: 4rem;
+    left: 47%;
+    
+    transform:rotate(90deg) ;
+    color: var(--color-pry);
+
+}
+
+
+/****************Media queries Median screen******/
+
+@media  screen and (max-width: 1024px) {
+
+    
+}
+
+@media  screen and (max-width: 600px) {
+
+    .header__container{
+        margin-top: 0;
+        height: 100%;
+        overflow: hidden;
+        background: url(../../assets/me.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        place-items: center;
+        grid-template-columns: 1fr;
+        color: var(--color-bg);
+    }
+
+    .header__container .me{
+        height: 79%;
+        width: 100%;
+        position: relative;
+    }
+
+    .me__overlay{
+        height: 100%;
+        width: 100%;
+        background: black;
+        position: absolute;
+    }
+
+    
+    
+
+.header__socials,.scroll__down{
+    display: none;
+}
+    
+}

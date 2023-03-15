@@ -1,0 +1,42 @@
+.nav__container{
+    position: fixed;
+    width: 100vw;
+    height: 4rem;
+    top: 0;
+    background: var(--color-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav__links{
+    display: flex;
+}
+
+.nav__links li{
+    margin-right: 0.8rem;
+}
+
+.nav__links a.active{
+    color: var(--color-white);
+}
+
+
+/* =====Media query======== */
+
+@media screen and (max-width:600px) {
+    .nav__container{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        z-index: 2;
+        margin-bottom: 0;
+    }
+
+}
